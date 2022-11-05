@@ -98,12 +98,12 @@ class Commands(Cog):
         await ctx.channel.purge(limit=amount+1)
 
 
-    @command(name='snap', brief="Send a recent snapshot from the camera")
+    @command(name='snap', brief="Send a recent snapshot from the camera.")
     async def snap(self, ctx):
         await self.bot.send_snapshot(ctx)
 
 
-    @command(name='stream', brief="Send URL to camera live stream")
+    @command(name='stream', brief="Send URL to camera live stream.")
     async def stream(self, ctx):
         await self.bot.send_stream(ctx)
 
