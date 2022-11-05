@@ -1,8 +1,7 @@
 import os
 
-def install_requirements(cwd):
+def install_requirements():
     try:
-        os.system(f"source {os.path.join(cwd, 'venv/bin/activate')}")
         os.system("python3 install_requirements.py")
     except Exception as e:
         print(e)
@@ -61,7 +60,7 @@ def print_section(text):
 def main():
     cwd = os.getcwd()
     print_section("Installing requirements")
-    install_requirements(cwd)
+    install_requirements()
     print_section("Writing start.bash file")
     write_start_bash_file(cwd)
     print_section("Applying execute permission")
